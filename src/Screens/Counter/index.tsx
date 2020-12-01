@@ -40,7 +40,6 @@ interface Props {
     initValue: number;
 }
 
-// Button 컴포넌트 
 const Counter = ({title, initValue}: Props) => {
     const [count, setCount] = useState<number>(0);
 
