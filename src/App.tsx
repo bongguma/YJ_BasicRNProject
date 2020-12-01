@@ -7,6 +7,7 @@
  */
 
 import { StatusBar, SafeAreaView } from 'react-native';
+import Counter from '../../YJ_BasicRNProject/src/Screens/Counter';
 import React, {Fragment} from 'react';
 
 import {
@@ -43,11 +44,17 @@ const HighLight = Styled.Text`
   font-weight: 700;
 `;
 
+const Container = Styled.View`
+  flex: 1;
+  background-color: #EEE;
+`;
+
 interface Props {}
 
 const App  = ({}:Props) => {
   return (
-    <>
+    // 제일 처음 실행했을 때 보이는 APP.tsx
+    /*<>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
         <ScrollView contentInsetAdjustmentBehavior="automatic">
@@ -83,7 +90,11 @@ const App  = ({}:Props) => {
           </Body>
         </ScrollView>
       </SafeAreaView>
-    </>
+    </>*/
+
+    <Container>
+      <Counter title="First Ex Project" initValue={5}></Counter>
+    </Container>
   );
 };
 
