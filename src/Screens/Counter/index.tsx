@@ -49,12 +49,14 @@ class Counter extends React.Component<Props, State>{
     constructor(props: Props) {
         super(props);
         console.log('constructor');
-
+        
+        // State 값 초기화
         this.state = {
             count: props.initValue,
         };
     }
 
+    // render 라이프 사이클 적용
     render() {
         const {title} = this.props;
         const {count} = this.state;
@@ -75,6 +77,43 @@ class Counter extends React.Component<Props, State>{
                 </ButtonContainer>
             </Container>
         )
+    }
+
+    static getDerivedStateFromProps(nextProps: Props, prevState: State){
+        console.log('getDerivedStateFromProps');
+
+        return null;
+    }
+
+    componentDidMount(){
+        console.log('componentDidMount');
+    }
+
+    getSnapshotBeforeUpdate(prevProps: Props, prevState: State) {
+        console.log('getSnapshotBeforeUpdate');
+        return{
+            testData : true,
+        };
+    }
+
+    componentDidUpdate(prevProps: Props, prevState: State){
+        console.log('componentDidUpdate');
+    }
+
+    shouldComponentUpdate(nextProps: Props, nextState: State){
+        console.log('shouldComponentUpdate');
+
+        return true;
+    }
+
+    componentWillUnmount(){
+        console.log('componentWillUnmount');
+    }
+
+    componentDidCatch(error: Error, info: React.ErrorInfo){
+        this.setState({
+            // error: true,
+        });
     }
 }
 
