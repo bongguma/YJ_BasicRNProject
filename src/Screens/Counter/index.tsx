@@ -40,7 +40,46 @@ interface Props {
     initValue: number;
 }
 
-const Counter = ({title, initValue}: Props) => {
+interface State {
+    count:number;
+}
+
+// 클래스형 컴포넌트
+class Counter extends React.Component<Props, State>{
+    constructor(props: Props) {
+        super(props);
+        console.log('constructor');
+
+        this.state = {
+            count: props.initValue,
+        };
+    }
+
+    render() {
+        const {title} = this.props;
+        const {count} = this.state;
+
+        return (
+            <Container>
+                { title && (
+                    <TitleContainer>
+                        <TitleLabel>{title}</TitleLabel>
+                    </TitleContainer>
+                )}
+                <CountContainer>
+                    <CountLabel>{count}</CountLabel>
+                </CountContainer>
+                <ButtonContainer>
+                    <Button iconName="add" onPress={() => this.setState({count : count + 1})} />
+                    <Button iconName="remove" onPress={() => this.setState({count : count - 1})} />
+                </ButtonContainer>
+            </Container>
+        )
+    }
+}
+
+// 함수형 컴포넌트
+/*const Counter = ({title, initValue}: Props) => {
     const [count, setCount] = useState<number>(0);
 
     return (
@@ -59,6 +98,6 @@ const Counter = ({title, initValue}: Props) => {
             </ButtonContainer>
         </Container>
     );
-};
+};*/
 
 export default Counter;
