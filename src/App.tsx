@@ -8,7 +8,11 @@
 
 import { StatusBar, SafeAreaView } from 'react-native';
 import Counter from '../../YJ_BasicRNProject/src/Screens/Counter';
+import TodoListIndexScreen from '../../YJ_BasicRNProject/src/Screens/TodoListEx/TodoListIndexScreen';
 import React, {Fragment} from 'react';
+
+import { createAppContainer } from "react-navigation";
+import { createStackNavigator } from "react-navigation-stack";
 
 import {
   Header,
@@ -53,7 +57,7 @@ interface Props {}
 
 const App  = ({}:Props) => {
   return (
-    // 제일 처음 실행했을 때 보이는 APP.tsx
+    // 제일 처음 실행했을 때 보이는 APP.tsx*/
     /*<>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
@@ -98,4 +102,16 @@ const App  = ({}:Props) => {
   );
 };
 
-export default App;
+const navigator = createStackNavigator(
+  {
+    todoListIndex : TodoListIndexScreen, // 컴포넌트 이름을 써준다.
+  },
+  {
+    initialRouteName : "todoListIndex", // 가장 처음 렌더되는 컴포넌트를 불러온다. 즉 HomeScreen를 불러옴
+    defaultNavigationOptions : {
+      title : "App"
+    }
+  }
+);
+
+export default createAppContainer(navigator);

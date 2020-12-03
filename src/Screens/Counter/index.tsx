@@ -2,6 +2,9 @@ import React, {useState} from 'react';
 import Styled from 'styled-components/native';
 import Button from '../../Components/Button';
 
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
 const Container = Styled.SafeAreaView`
     flex: 1;
 `;
@@ -46,6 +49,7 @@ interface State {
 
 // 클래스형 컴포넌트
 class Counter extends React.Component<Props, State>{
+    
     constructor(props: Props) {
         super(props);
         console.log('constructor');
