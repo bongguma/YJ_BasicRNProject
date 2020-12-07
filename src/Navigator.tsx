@@ -9,6 +9,7 @@
 import { StatusBar, SafeAreaView } from 'react-native';
 import indexScreen from './Screens/Counter/index';
 import TodoListIndexScreen from './Screens/TodoListEx/TodoListIndexScreen';
+import WeatherViewScreen from './Screens/WeatherView/WeatherViewScreen';
 import React, {Fragment} from 'react';
 
 import { createAppContainer } from "react-navigation";
@@ -33,9 +34,10 @@ interface Props {}
 const navigator = createStackNavigator(
   {
     todoListIndex : TodoListIndexScreen,
+    weatherView : WeatherViewScreen,
   },
   {
-    initialRouteName : "todoListIndex", // 가장 처음 렌더되는 컴포넌트를 불러온다. 즉 HomeScreen를 불러옴
+    initialRouteName : "weatherView", // 가장 처음 렌더되는 컴포넌트를 불러온다. 즉 HomeScreen를 불러옴
     defaultNavigationOptions : {
       title : "App" 
     }
