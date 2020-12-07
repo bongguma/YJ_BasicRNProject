@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { FlatList, Alert } from 'react-native';
+import { FlatList, Alert, Platform } from 'react-native';
 import Geolocation from 'react-native-geolocation-service';
 
 import Styled from 'styled-components/native';
@@ -69,7 +69,7 @@ const WeatherView = ({}: Props) => {
             position => {
                 const { latitude, longitude } = position.coords;
                 fetch(
-                    'http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID={API_KEY}&units=metric'
+                    `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&APPID=${API_KEY}&units=metric`
                 )
                 .then(response => response.json())
                 .then(json => {
@@ -101,7 +101,19 @@ const WeatherView = ({}: Props) => {
         }, 500);
     };
 
+    async function requestPermission() {
+        try {
+            if (Platform.OS === "ios") {
+                   return await Geolocation.requestAuthorization("always"); 
+            } 
+        } catch (e) { 
+            console.log(e); 
+        } 
+    }
+
     useEffect(() => {
+        requestPermission().then(result => { if (result === "granted") { Geolocation.getCurrentPosition( pos => { console.log(pos); }, error => { console.log(error); }, { enableHighAccuracy: true, timeout: 3600, maximumAge: 3600, }, ); } });
+
         getCurrentWeather();
     },[]);
 
