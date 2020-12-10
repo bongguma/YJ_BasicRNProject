@@ -23,6 +23,7 @@
     "react-native-reanimated": "1.13.2",
     "react-native-safe-area-context": "3.1.9",
     "react-native-screens": "2.15.0",
+    "react-native-splash-screen": "3.2.0",
     "react-native-vector-icons": "7.1.0",
     "react-native-webview": "11.0.0",
     "react-navigation": "4.4.3",
@@ -32,6 +33,7 @@
   "devDependencies": {
     "@babel/core": "7.12.9",
     "@babel/runtime": "7.12.5",
+    "@bam.tech/react-native-make": "3.0.0",
     "@react-native-community/eslint-config": "1.1.0",
     "@types/react": "17.0.0",
     "@types/react-native": "0.63.37",
