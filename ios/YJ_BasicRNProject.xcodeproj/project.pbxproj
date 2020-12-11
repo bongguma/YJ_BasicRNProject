@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* YJ_BasicRNProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* YJ_BasicRNProjectTests.m */; };
+		0FD2CEA12583C75600EB29C6 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FD2CEA02583C75600EB29C6 /* SplashScreen.storyboard */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -45,6 +46,7 @@
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* YJ_BasicRNProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJ_BasicRNProjectTests.m; sourceTree = "<group>"; };
 		09484A11307C46B9BF2E1757 /* libPods-YJ_BasicRNProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YJ_BasicRNProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FD2CEA02583C75600EB29C6 /* SplashScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
 		12C1DD6A1F1C8A2F06A381D3 /* Pods-YJ_BasicRNProject-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YJ_BasicRNProject-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-YJ_BasicRNProject-tvOSTests/Pods-YJ_BasicRNProject-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* YJ_BasicRNProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YJ_BasicRNProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = YJ_BasicRNProject/AppDelegate.h; sourceTree = "<group>"; };
@@ -143,7 +145,6 @@
 			children = (
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -169,6 +170,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				0FD2CEA02583C75600EB29C6 /* SplashScreen.storyboard */,
 				13B07FAE1A68108700A75B9A /* YJ_BasicRNProject */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* YJ_BasicRNProjectTests */,
@@ -207,7 +209,6 @@
 				F74884D916D61227B2F45D1E /* Pods-YJ_BasicRNProjectTests.debug.xcconfig */,
 				63B7CE02D809178CB844218B /* Pods-YJ_BasicRNProjectTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -354,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				0FD2CEA12583C75600EB29C6 /* SplashScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
