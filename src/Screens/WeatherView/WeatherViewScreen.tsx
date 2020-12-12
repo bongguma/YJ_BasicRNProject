@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {FlatList, Alert, Platform} from 'react-native';
 import Geolocation from 'react-native-geolocation-service';
+import SplashScreen from 'react-native-splash-screen';
 
 import Styled from 'styled-components/native';
 
@@ -93,7 +94,7 @@ const WeatherView = ({}: Props) => {
     }, 500);
   };
 
-
+  // 위치 권한 퍼미션 로직
   async function requestPermission() {
     try {
         if (Platform.OS === "ios") {
@@ -106,11 +107,13 @@ const WeatherView = ({}: Props) => {
 
 
   useEffect(() => {
+    //위치권한 퍼미션 
     requestPermission()
         .then(result => { 
             if (result === "granted") {
                  Geolocation.getCurrentPosition( pos => {
                     getCurrentWeather();
+                    SplashScreen.hide();
                 }, error => { 
                 console.log(error); }, {
                         enableHighAccuracy: true, timeout: 3600, maximumAge: 3600, 
