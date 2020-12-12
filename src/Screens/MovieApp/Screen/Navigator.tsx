@@ -6,7 +6,7 @@ import {UserContext} from '../Context/User';
 
 import Loading from '../Screen/Loading';
 import Login from '../Screen/Login';
-import MovieHome from '../Screens/MovieHome';
+import MovieHome from '../Screen/MoviewHome';
 import MovieDetail from '../Screens/MovieDetail';
 
 const Stack = createStackNavigator();

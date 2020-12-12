@@ -2,7 +2,7 @@ import React, {createContext, useState, useEffect, Children} from 'react';
 import AsyncStorage from '@react-native-community/async-storage';
 import { DevSettings } from 'react-native';
 
-const defaultContext: IuserContext = {
+const defaultContext: IUserContext = {
     isLoading: false,
     userInfo: undefined,
     login: (email: string, password: string) => {},

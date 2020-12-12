@@ -34,7 +34,7 @@ interface Props {
 }
 
 const Login = ({navigation}: Props) => {
-    const {login} = useContext<IuserContext>(UserContext);
+    const {login} = useContext<IUserContext>(UserContext);
 
     useEffect(() => {
         SplashScreen.hide();
@@ -47,7 +47,7 @@ const Login = ({navigation}: Props) => {
                 <Input style={{marginBottom: 16}} 
                     placeholder="비밀번호"
                     secureTextEntry={true} />
-                <Button Style={{marginBottom : 24}}
+                <Button style={{marginBottom : 24}}
                          label="로그인"
                          onPress={() => {
                             login('dev.yakuza@gmail.com', 'password');

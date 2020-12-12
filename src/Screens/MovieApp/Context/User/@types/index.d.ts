@@ -3,7 +3,7 @@ interface IuserInfo {
     email: String;
 }
 
-interface IuserContext {
+interface IUserContext {
     isLoading: boolean;
     userInfo: IuserInfo | undefined;
     login: (email: string, password: string) => void;
