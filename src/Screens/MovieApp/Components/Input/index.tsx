@@ -17,7 +17,7 @@ const InputField = Styled.TextInput`
 
 interface Props {
     placeholder?: string;
-    keyboardType: 'default' | 'email-address' | 'numeric' | 'phone-pad';
+    keyboardType?: 'default' | 'email-address' | 'numeric' | 'phone-pad';
     secureTextEntry? : boolean;
     style? : Object;
     clearMode?: boolean;

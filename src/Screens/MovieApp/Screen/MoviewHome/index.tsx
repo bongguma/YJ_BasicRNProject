@@ -5,7 +5,7 @@ import Styled from 'styled-components/native';
 
 import {UserContext} from '../../Context/User';
 
-import BitCatalogList from './BitCatalogList';
+import BitCatalogList from './BigCatalogList';
 import SubCatalogList from './SubCatalogList';
 
 const Container = Styled.ScrollView`
