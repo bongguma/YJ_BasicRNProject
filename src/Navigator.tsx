@@ -6,7 +6,8 @@
  * @flow strict-local
  */
 
-import { StatusBar, SafeAreaView } from 'react-native';
+ // navigator를 배우기 전에 내가 이용했던 navigator
+/*import { StatusBar, SafeAreaView } from 'react-native';
 import indexScreen from './Screens/Counter/index';
 import TodoListIndexScreen from './Screens/TodoListEx/TodoListIndexScreen';
 import WeatherViewScreen from './Screens/WeatherView/WeatherViewScreen';
@@ -45,3 +46,23 @@ const navigator = createStackNavigator(
 );
 
 export default createAppContainer(navigator);
+*/
+
+
+// navigator 예제 학습 중
+import React from 'react';
+import {StatusBar} from 'react-native';
+import Navigator from '../src/Screens/MovieApp/Screen/Navigator'
+
+import {UserContextProvider} from '../src/Screens/MovieApp/Context/User';
+
+const App = () => {
+  return(
+    <UserContextProvider>
+      <StatusBar barStyle = "light-content" />
+      <Navigator />
+    </UserContextProvider>
+  );
+};
+
+ export default App;
