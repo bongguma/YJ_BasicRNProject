@@ -107,13 +107,14 @@ const WeatherView = ({}: Props) => {
 
 
   useEffect(() => {
+
+    SplashScreen.hide();
     //위치권한 퍼미션 
     requestPermission()
         .then(result => { 
             if (result === "granted") {
                  Geolocation.getCurrentPosition( pos => {
                     getCurrentWeather();
-                    SplashScreen.hide();
                 }, error => { 
                 console.log(error); }, {
                         enableHighAccuracy: true, timeout: 3600, maximumAge: 3600, 

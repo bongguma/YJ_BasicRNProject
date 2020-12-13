@@ -4,7 +4,7 @@ import Styled from 'styled-components/native';
 
 const Container = Styled.View``;
 
-const Title = Styled.View`
+const Title = Styled.Text`
     font-size: 16px;
     color: #ffffff;
     font-weight: bold;

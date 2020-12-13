@@ -22,6 +22,7 @@ interface IMovie {
     small_cover_image: string;
     state: string;
     url: string;
+    torrents: string;
     year: number;
     yt_trailer_code: string;
 }

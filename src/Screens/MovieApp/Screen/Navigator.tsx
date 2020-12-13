@@ -46,7 +46,7 @@ const MovieNavigator = () => {
                     },
             }}/>
             <Stack.Screen 
-                name= "MovieDetaill"
+                name= "MovieDetail"
                 component={MovieDetail}
                 options={{
                     title:`MOVIEAPP`,

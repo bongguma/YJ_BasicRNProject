@@ -10,3 +10,4 @@ interface IUserContext {
     getUserInfo: () => void;
     logout: () => void;
 }
+

@@ -2,7 +2,9 @@ import React from 'react';
 import { Dimensions } from 'react-native';
 import Styled from 'styled-components/native';
 
-const Container = Styled.TouchableOpacity``;
+const Container = Styled.TouchableOpacity`
+`;
+
 const CatalogImage = Styled.Image``;
 const InfoContainer = Styled.View`
     position: absolute;
@@ -15,7 +17,6 @@ const LabelYear = Styled.Text`
     color: #ffffff;
     padding: 4px 8px;
     margin-left: 4px;
-    marign-bottom: 4px;
     font-weight: bold;
     border-radius: 4px;
 `;

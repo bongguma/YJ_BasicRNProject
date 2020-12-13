@@ -6,7 +6,7 @@ const Container = Styled.View`
     margin-bottom: 24px;
 `;
 
-const Title = Styled.View`
+const Title = Styled.Text`
     font-size: 16px;
     color: #ffffff;
     font-weight: bold;
