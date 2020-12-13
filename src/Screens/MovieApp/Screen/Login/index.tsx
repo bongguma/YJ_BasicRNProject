@@ -12,7 +12,7 @@ const Container = Styled.SafeAreaView`
     flex: 1;
     background-color: #141414;
     align-items: center;
-    jusify-content: center;
+    justify-content: center;
 `;
 
 const FormContainer = Styled.View`

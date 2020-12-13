@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import {FlatList} from 'react-native';
 import { exp } from 'react-native-reanimated';
-import Styled from 'styled-components';
+import Styled from 'styled-components/native';
 
 import BigCatalog from '../../../Components/BigCatalog';
 
-const Container = Styled.view`
+const Container = Styled.View`
     height: 300px;
     margin-bottom: 8px;
 `;

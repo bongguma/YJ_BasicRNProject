@@ -4,7 +4,7 @@ import Login from '../../Screen/Login';
 
 const StyleButton = Styled.TouchableOpacity`
     width: 100%;
-    hieght: 40px;
+    height: 40px;
     border-radius: 4px;
     justify-content: center;
     align-items: center;
