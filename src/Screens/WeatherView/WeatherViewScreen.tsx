@@ -42,6 +42,7 @@ interface Props {}
 
 const API_KEY = '971646f3a4af7308a4ac102f9e0317f4';
 
+// Weather API 이용
 interface IWeather {
   temperature?: number;
   weather?: string;
